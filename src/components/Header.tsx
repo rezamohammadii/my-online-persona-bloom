@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -18,8 +19,9 @@ const Header = () => {
             <Button variant="ghost" className="text-foreground hover:text-orange">CONTACT ME</Button>
           </nav>
           
-          {/* Social Icons */}
+          {/* Social Icons & Theme Toggle */}
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <Facebook className="w-5 h-5 text-foreground hover:text-orange cursor-pointer" />
             <Instagram className="w-5 h-5 text-foreground hover:text-orange cursor-pointer" />
             <Linkedin className="w-5 h-5 text-foreground hover:text-orange cursor-pointer" />
