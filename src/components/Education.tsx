@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const educationData = [
   {
@@ -22,7 +23,8 @@ const educationData = [
 
 const Education = () => {
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
-
+  const { ref, isVisible } = useScrollAnimation();
+  
   const toggleExpand = (index: number) => {
     setExpandedItems(prev => 
       prev.includes(index) 
@@ -32,7 +34,7 @@ const Education = () => {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section ref={ref} className={`py-20 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

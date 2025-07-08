@@ -1,4 +1,5 @@
 import { Progress } from "@/components/ui/progress";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const skills = [
   { name: "FIGMA", percentage: 60, icon: "🎨" },
@@ -10,8 +11,10 @@ const skills = [
 ];
 
 const Skills = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section ref={ref} className={`py-20 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

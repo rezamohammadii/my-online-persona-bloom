@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
+    <section ref={ref} className={`min-h-screen flex items-center relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-10"
