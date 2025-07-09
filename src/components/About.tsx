@@ -5,7 +5,7 @@ const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section ref={ref} className={`py-20 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+    <section ref={ref} className={`py-20 bg-gradient-to-br from-background via-accent/5 to-primary/5 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

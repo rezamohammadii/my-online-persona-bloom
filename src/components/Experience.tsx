@@ -53,7 +53,7 @@ const Experience = () => {
   };
 
   return (
-    <section ref={ref} className={`py-20 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
+    <section ref={ref} className={`py-20 bg-gradient-to-br from-secondary/10 via-accent/5 to-primary/10 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

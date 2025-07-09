@@ -34,7 +34,7 @@ const Education = () => {
   };
 
   return (
-    <section ref={ref} className={`py-20 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+    <section ref={ref} className={`py-20 bg-gradient-to-bl from-accent/5 via-background to-primary/10 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-5"

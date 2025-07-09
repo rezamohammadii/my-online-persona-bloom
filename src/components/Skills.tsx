@@ -14,7 +14,7 @@ const Skills = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section ref={ref} className={`py-20 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+    <section ref={ref} className={`py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 relative overflow-hidden transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-5"
